@@ -20,18 +20,18 @@ body {
 }
 
 .container {
-  height: 100vh; /* Ensure full viewport height */
+  height: 150vh; /* Ensure full viewport height */
   display: flex;
+  flex-direction: column; /* Stack items vertically */
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Stack items vertically */
 }
 
 .gallery-wrapper {
   display: flex;
-  flex-direction: column; /* Stack gallery and envelope vertically on smaller screens */
-  align-items: center;
-  gap: 20px; /* Space between elements */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
 }
 
 .image-gallery {
