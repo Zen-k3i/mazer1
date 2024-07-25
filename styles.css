@@ -20,31 +20,31 @@ body {
 }
 
 .container {
-  height: 150vh;
+  height: 100vh; /* Ensure full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Ensure vertical alignment */
+  flex-direction: column; /* Stack items vertically */
 }
 
 .gallery-wrapper {
   display: flex;
-  flex-direction: column; /* Stack the image galleries and envelope vertically */
+  flex-direction: column; /* Stack gallery and envelope vertically on smaller screens */
   align-items: center;
-  gap: 20px; /* Space between the image galleries and envelope */
+  gap: 20px; /* Space between elements */
 }
 
 .image-gallery {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between images in the gallery */
+  gap: 10px; /* Space between images */
 }
 
 .gallery-photo {
-  width: 150px; /* Adjust size as needed */
+  width: 150px; /* Size for desktops */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: Rounded corners for the photo */
-  box-shadow: 0 0 10px var(--shadow-color); /* Optional: Shadow effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px var(--shadow-color); /* Shadow effect */
 }
 
 .envelope-wrapper {
@@ -59,8 +59,8 @@ body {
 
 .envelope {
   position: relative;
-  width: 100%; /* Fill the envelope-wrapper width */
-  height: 100%; /* Fill the envelope-wrapper height */
+  width: 100%; /* Fill envelope-wrapper width */
+  height: 100%; /* Fill envelope-wrapper height */
 }
 
 .envelope::before {
@@ -98,7 +98,7 @@ body {
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
   padding: 10px;
-  font-size: 12px;
+  font-size: 12px; /* Font size for desktops */
   overflow-y: auto;
 }
 
@@ -106,7 +106,7 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: var(--txt-color);
   text-align: left;
-  font-size: 12px;
+  font-size: 12px; /* Font size for text */
 }
 
 .heart {
@@ -158,25 +158,27 @@ body {
 }
 
 /* Media Queries for Responsive Design */
+
+/* Adjustments for tablets and smaller screens */
 @media (max-width: 1024px) {
   .gallery-wrapper {
-    flex-direction: column; /* Stack elements vertically */
-    gap: 10px; /* Reduce gap for medium screens */
+    flex-direction: column; /* Stack gallery and envelope vertically */
+    gap: 15px; /* Reduce gap for tablets */
   }
 
   .gallery-photo {
-    width: 130px; /* Adjust size for tablet screens */
+    width: 130px; /* Adjust size for tablets */
   }
 
   .envelope-wrapper {
-    width: 350px; /* Adjust size for tablet screens */
+    width: 350px; /* Adjust size for tablets */
     height: 230px;
   }
 
   .letter {
     width: 90%;
     height: 80%;
-    font-size: 11px; /* Adjust font size for tablet screens */
+    font-size: 11px; /* Adjust font size for tablets */
   }
 
   .text {
@@ -184,6 +186,7 @@ body {
   }
 }
 
+/* Adjustments for mobile phones */
 @media (max-width: 768px) {
   .gallery-photo {
     width: 120px; /* Smaller size for mobile */
@@ -205,6 +208,7 @@ body {
   }
 }
 
+/* Adjustments for very small screens */
 @media (max-width: 480px) {
   .gallery-photo {
     width: 100px; /* Even smaller size for very small screens */
