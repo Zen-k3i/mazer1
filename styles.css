@@ -24,10 +24,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column; /* Ensure vertical alignment */
 }
 
 .gallery-wrapper {
   display: flex;
+  flex-direction: column; /* Stack the image galleries and envelope vertically */
   align-items: center;
   gap: 20px; /* Space between the image galleries and envelope */
 }
@@ -95,7 +97,7 @@ body {
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 10px 10px;
+  padding: 10px;
   font-size: 12px;
   overflow-y: auto;
 }
@@ -153,4 +155,78 @@ body {
 .flap > .heart {
   transform: rotate(90deg);
   transition-delay: 0.4s;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-wrapper {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Reduce gap for medium screens */
+  }
+
+  .gallery-photo {
+    width: 130px; /* Adjust size for tablet screens */
+  }
+
+  .envelope-wrapper {
+    width: 350px; /* Adjust size for tablet screens */
+    height: 230px;
+  }
+
+  .letter {
+    width: 90%;
+    height: 80%;
+    font-size: 11px; /* Adjust font size for tablet screens */
+  }
+
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-photo {
+    width: 120px; /* Smaller size for mobile */
+  }
+
+  .envelope-wrapper {
+    width: 300px; /* Smaller envelope for mobile */
+    height: 200px;
+  }
+
+  .letter {
+    width: 90%;
+    height: 80%;
+    font-size: 10px; /* Smaller font size for mobile */
+  }
+
+  .text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-photo {
+    width: 100px; /* Even smaller size for very small screens */
+  }
+
+  .envelope-wrapper {
+    width: 250px; /* Adjust size for very small screens */
+    height: 180px;
+  }
+
+  .letter {
+    width: 95%;
+    height: 70%;
+    font-size: 8px; /* Smaller font size for very small screens */
+  }
+
+  .text {
+    font-size: 8px;
+  }
+
+  .heart {
+    width: 12px;
+    height: 12px;
+  }
 }
